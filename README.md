@@ -1,7 +1,7 @@
 XEOS / lib / elf
 ================
 
-[![Build Status](https://img.shields.io/travis/macmade/XEOS.svg?branch=master&style=flat)](https://travis-ci.org/macmade/XEOS)
+[![Build Status](https://img.shields.io/travis/macmade/XEOS-lib-elf.svg?branch=master&style=flat)](https://travis-ci.org/macmade/XEOS-lib-elf)
 [![Issues](http://img.shields.io/github/issues/macmade/XEOS-lib-elf.svg?style=flat)](https://github.com/macmade/XEOS-lib-elf/issues)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)
 ![License](https://img.shields.io/badge/license-xeos-brightgreen.svg?style=flat)

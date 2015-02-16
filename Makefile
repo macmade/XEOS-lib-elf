@@ -59,57 +59,22 @@
 
 # $Id$
 
-include ../../../Makefile-Config.mk
+include make/Config.mk
+include make/Targets.mk
 
-#-------------------------------------------------------------------------------
-# Display
-#-------------------------------------------------------------------------------
+PROMPT  := XEOS SOURCE LIB ELF
+DEPS    := XEOS-lib-posix XEOS-lib-c99 XEOS-lib-system
+FILES   := $(call XEOS_FUNC_C_FILES,$(DIR_SRC)file/)      \
+           $(call XEOS_FUNC_C_FILES,$(DIR_SRC)functions/) \
+           $(call XEOS_FUNC_C_FILES,$(DIR_SRC)header/)    \
+           $(call XEOS_FUNC_C_FILES,$(DIR_SRC)pheader/)   \
+           $(call XEOS_FUNC_C_FILES,$(DIR_SRC)sheader/)   \
+           $(call XEOS_FUNC_C_FILES,$(DIR_SRC)symbol/) 
 
-PROMPT  := "    ["$(COLOR_GREEN)" XEOS "$(COLOR_NONE)"]> ["$(COLOR_GREEN)" SRC  "$(COLOR_NONE)"]> ["$(COLOR_GREEN)" LIB  "$(COLOR_NONE)"]> ["$(COLOR_GREEN)" ELF  "$(COLOR_NONE)"]> *** "
-
-#-------------------------------------------------------------------------------
-# Files
-#-------------------------------------------------------------------------------
-
-_FILES  = $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_ELF))
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_ELF)file/)
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_ELF)functions/)
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_ELF)header/)
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_ELF)pheader/)
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_ELF)sheader/)
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_ELF)symbol/)
-
-#-------------------------------------------------------------------------------
-# Built-in targets
-#-------------------------------------------------------------------------------
-
-# Declaration for phony targets, to avoid problems with local files
-.PHONY: all clean
-
-#-------------------------------------------------------------------------------
-# Phony targets
-#-------------------------------------------------------------------------------
-
-# Build the full project
-all: $(_FILES)
+all: obj-build
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libelf$(EXT_LIB_STATIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_STATIC_32,libelf,$^)
+	@:
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libelf$(EXT_LIB_STATIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_STATIC_64,libelf,$^)
+clean: obj-clean
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libelf$(EXT_LIB_DYNAMIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_DYNAMIC_32,libelf,$^)
-	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libelf$(EXT_LIB_DYNAMIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_DYNAMIC_64,libelf,$^)
-
-# Cleans the build files
-clean:
-	
-	@$(PRINT) $(PROMPT)"Cleaning all build files"
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_32_OBJ)$(subst $(PATH_SRC),,$(PATH_SRC_LIB_ELF))
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_64_OBJ)$(subst $(PATH_SRC),,$(PATH_SRC_LIB_ELF))
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_32_BIN)libelf.*
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_64_BIN)libelf.*
+	@:
