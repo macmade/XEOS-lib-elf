@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_ELF_TYPES_H__
-#define __XEOS_LIB_ELF_TYPES_H__
+#ifndef XEOS_LIB_ELF_TYPES_H
+#define XEOS_LIB_ELF_TYPES_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -71,11 +71,11 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 
-typedef struct __ELF64_File                 * ELF64_FileRef;
-typedef struct __ELF64_Header               * ELF64_HeaderRef;
-typedef struct __ELF64_ProgramHeaderEntry   * ELF64_ProgramHeaderEntryRef;
-typedef struct __ELF64_SectionHeaderEntry   * ELF64_SectionHeaderEntryRef;
-typedef struct __ELF64_SymbolTableEntry     * ELF64_SymbolTableEntryRef;
+typedef const struct __ELF64_File               * ELF64_FileRef;
+typedef const struct __ELF64_Header             * ELF64_HeaderRef;
+typedef const struct __ELF64_ProgramHeaderEntry * ELF64_ProgramHeaderEntryRef;
+typedef const struct __ELF64_SectionHeaderEntry * ELF64_SectionHeaderEntryRef;
+typedef const struct __ELF64_SymbolTableEntry   * ELF64_SymbolTableEntryRef;
 
 typedef uint64_t    ELF64_Addr;
 typedef uint64_t    ELF64_Off;
@@ -250,4 +250,4 @@ ELF64_SymbolBinding;
 }
 #endif
 
-#endif /* __XEOS_LIB_ELF_TYPES_H__ */
+#endif /* XEOS_LIB_ELF_TYPES_H */

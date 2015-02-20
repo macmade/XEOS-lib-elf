@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_ELF_HEADER_H__
-#define __XEOS_LIB_ELF_HEADER_H__
+#ifndef XEOS_LIB_ELF_HEADER_H
+#define XEOS_LIB_ELF_HEADER_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -96,4 +96,4 @@ ELF64_Half              ELF64_HeaderGetSectionNameStringTableIndex( ELF64_Header
 }
 #endif
 
-#endif /* __XEOS_LIB_ELF_HEADER_H__ */
+#endif /* XEOS_LIB_ELF_HEADER_H */

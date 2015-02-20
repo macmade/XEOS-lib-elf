@@ -65,7 +65,7 @@
 #include <elf/__private/elf.h>
 #include <stdlib.h>
 
-ELF64_UChar * ELF64_FileGetDataForSection( ELF64_FileRef file, ELF64_SectionHeaderEntryRef section )
+const ELF64_UChar * ELF64_FileGetDataForSection( ELF64_FileRef file, ELF64_SectionHeaderEntryRef section )
 {
     ELF64_Off fileOffset;
     
@@ -76,5 +76,5 @@ ELF64_UChar * ELF64_FileGetDataForSection( ELF64_FileRef file, ELF64_SectionHead
     
     fileOffset = ELF64_SectionHeaderEntryGetFileOffset( section );
     
-    return ( ELF64_UChar * )file + fileOffset;
+    return ( const ELF64_UChar * )file + fileOffset;
 }

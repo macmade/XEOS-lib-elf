@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_ELF_SHEADER_H__
-#define __XEOS_LIB_ELF_SHEADER_H__
+#ifndef XEOS_LIB_ELF_SHEADER_H
+#define XEOS_LIB_ELF_SHEADER_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -86,4 +86,4 @@ unsigned int        ELF64_SectionHeaderEntryGetSymbolTableEntryCount( ELF64_Sect
 }
 #endif
 
-#endif /* __XEOS_LIB_ELF_SHEADER_H__ */
+#endif /* XEOS_LIB_ELF_SHEADER_H */

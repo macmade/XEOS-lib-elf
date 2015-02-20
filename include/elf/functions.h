@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_ELF_FUNCTIONS_H__
-#define __XEOS_LIB_ELF_FUNCTIONS_H__
+#ifndef XEOS_LIB_ELF_FUNCTIONS_H
+#define XEOS_LIB_ELF_FUNCTIONS_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -75,4 +75,4 @@ unsigned long   ELF64_Hash( const char * name );
 }
 #endif
 
-#endif /* __XEOS_LIB_ELF_FUNCTIONS_H__ */
+#endif /* XEOS_LIB_ELF_FUNCTIONS_H */

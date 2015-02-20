@@ -67,5 +67,5 @@
 
 ELF64_FileRef ELF64_ReadFromData( const char * data )
 {
-    return ( ELF64_FileRef )( ( void * )data );
+    return ( ELF64_FileRef )( ( const void * )data );
 }

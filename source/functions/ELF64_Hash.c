@@ -74,7 +74,7 @@ unsigned long ELF64_Hash( const char * name )
     
     while( *( name ) )
     {
-        h = ( h << 4 ) + *( ( unsigned char * )name++ );
+        h = ( h << 4 ) + *( ( const unsigned char * )name++ );
         
         if( ( g = h & 0xF0000000 ) )
         {

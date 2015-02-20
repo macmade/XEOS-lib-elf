@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_ELF___PRIVATE_ELF_H__
-#define __XEOS_LIB_ELF___PRIVATE_ELF_H__
+#ifndef XEOS_LIB_ELF___PRIVATE_ELF_H
+#define XEOS_LIB_ELF___PRIVATE_ELF_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -133,4 +133,4 @@ struct __ELF64_File
 }
 #endif
 
-#endif /* __XEOS_LIB_ELF___PRIVATE_ELF_H__ */
+#endif /* XEOS_LIB_ELF___PRIVATE_ELF_H */

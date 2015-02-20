@@ -86,5 +86,5 @@ ELF64_SectionHeaderEntryRef ELF64_FileGetSectionHeaderEntry( ELF64_FileRef file,
     offset      = ELF64_HeaderGetSectionHeaderOffset( header );
     entrySize   = ELF64_HeaderGetSectionHeaderEntrySize( header );
     
-    return ( ELF64_SectionHeaderEntryRef )( ( void * )( ( char * )file + offset + ( entrySize * index ) ) );
+    return ( ELF64_SectionHeaderEntryRef )( ( const void * )( ( const char * )file + offset + ( entrySize * index ) ) );
 }

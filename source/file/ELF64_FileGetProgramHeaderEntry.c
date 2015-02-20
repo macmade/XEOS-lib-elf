@@ -86,5 +86,5 @@ ELF64_ProgramHeaderEntryRef ELF64_FileGetProgramHeaderEntry( ELF64_FileRef file,
     offset      = ELF64_HeaderGetProgramHeaderOffset( header );
     entrySize   = ELF64_HeaderGetProgramHeaderEntrySize( header );
     
-    return ( ELF64_ProgramHeaderEntryRef )( ( void * )( ( char * )file + offset + ( entrySize * index ) ) );
+    return ( ELF64_ProgramHeaderEntryRef )( ( const void * )( ( const char * )file + offset + ( entrySize * index ) ) );
 }

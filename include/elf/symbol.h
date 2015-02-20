@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_ELF_SYMBOL_H__
-#define __XEOS_LIB_ELF_SYMBOL_H__
+#ifndef XEOS_LIB_ELF_SYMBOL_H
+#define XEOS_LIB_ELF_SYMBOL_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -82,4 +82,4 @@ ELF64_XWord         ELF64_SymbolTableEntryGetObjectSize( ELF64_SymbolTableEntryR
 }
 #endif
 
-#endif /* __XEOS_LIB_ELF_SYMBOL_H__ */
+#endif /* XEOS_LIB_ELF_SYMBOL_H */

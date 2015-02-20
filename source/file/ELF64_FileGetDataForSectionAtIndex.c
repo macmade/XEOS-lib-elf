@@ -65,7 +65,7 @@
 #include <elf/__private/elf.h>
 #include <stdlib.h>
 
-ELF64_UChar * ELF64_FileGetDataForSectionAtIndex( ELF64_FileRef file, unsigned int index )
+const ELF64_UChar * ELF64_FileGetDataForSectionAtIndex( ELF64_FileRef file, unsigned int index )
 {
     return ELF64_FileGetDataForSection( file, ELF64_FileGetSectionHeaderEntry( file, index ) );
 }

@@ -81,5 +81,5 @@ ELF64_SymbolTableEntryRef ELF64_FileGetSymbolTableEntryForSection( ELF64_FileRef
     
     entrySize = ELF64_SectionHeaderEntryGetEntrySize( section );
     
-    return ( ELF64_SymbolTableEntryRef )( ( void * )( ELF64_FileGetDataForSection( file, section ) + ( index * entrySize ) ) );
+    return ( ELF64_SymbolTableEntryRef )( ( const void * )( ELF64_FileGetDataForSection( file, section ) + ( index * entrySize ) ) );
 }
