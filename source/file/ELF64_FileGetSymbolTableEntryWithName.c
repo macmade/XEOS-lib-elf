@@ -59,8 +59,6 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  ******************************************************************************/
 
-/* $Id$ */
-
 #include <elf.h>
 #include <elf/__private/elf.h>
 #include <stdlib.h>

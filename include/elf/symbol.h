@@ -59,8 +59,6 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  ******************************************************************************/
 
-/* $Id$ */
-
 #ifndef XEOS_LIB_ELF_SYMBOL_H
 #define XEOS_LIB_ELF_SYMBOL_H
 
